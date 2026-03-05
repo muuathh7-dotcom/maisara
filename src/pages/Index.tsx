@@ -1,0 +1,35 @@
+import Hero from "@/components/Hero";
+import TargetSegments from "@/components/TargetSegments";
+import HowItWorks from "@/components/HowItWorks";
+import Packages from "@/components/Packages";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+const Index = () => {
+  return <div className="min-h-screen">
+      <div className="pt-8 hero-gradient">
+        <Hero />
+      </div>
+      <div className="py-[20px]">
+        <HowItWorks />
+      </div>
+      <div className="py-[6px]">
+        <Packages />
+      </div>
+      <div className="py-[30px]">
+        <TargetSegments />
+      </div>
+      <div className="py-[20px]">
+        <Testimonials />
+      </div>
+      <div className="py-[20px]">
+        <FAQ />
+      </div>
+      <div className="py-0">
+        <CTA />
+      </div>
+      <Footer />
+    </div>;
+};
+export default Index;
