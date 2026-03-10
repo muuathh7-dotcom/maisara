@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import TargetSegments from "@/components/TargetSegments";
 import HowItWorks from "@/components/HowItWorks";
-import Packages from "@/components/Packages";
+import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -15,7 +15,7 @@ const Index = () => {
         <HowItWorks />
       </div>
       <div className="py-[6px]">
-        <Packages />
+        <Services />
       </div>
       <div className="py-[30px]">
         <TargetSegments />

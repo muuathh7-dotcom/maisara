@@ -10,10 +10,10 @@ const CTA = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            ابدأ رحلة العمرة بسهولة
+            ابدأ رحلتك بطمأنينة
           </h2>
           <p className="text-xl md:text-2xl mb-12 leading-relaxed opacity-90">
-            احجز الآن واحصل على خدمة نقل مباشر من المطار إلى الحرم الشريف
+            اختر خدماتك ودعنا نتولى التفاصيل لتتفرغ لعبادتك
           </p>
           
           {/* Contact Options */}
@@ -32,11 +32,16 @@ const CTA = () => {
                 size="lg" 
                 className="text-xl px-12 py-8 font-bold"
                 onClick={() => {
-                  trackConversion.buttonClick("احجز الآن", "cta_section");
-                  window.location.href = '/packages';
+                  trackConversion.buttonClick("اختر خدماتك", "cta_section");
+                  const servicesSection = document.getElementById('packages-section');
+                  if (servicesSection) {
+                    servicesSection.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/';
+                  }
                 }}
               >
-                احجز الآن
+                اختر خدماتك
               </Button>
              
            </div>
@@ -44,7 +49,7 @@ const CTA = () => {
           {/* Trust Indicators */}
           <div className="mt-12 pt-8 border-t border-white/20">
             <p className="text-white/80 text-lg">
-              خدمة معتمدة ومرخصة - نقل أمتعة سلس - فريق محترف ومدرب
+              خدمة معتمدة ومرخصة — نقل وتخزين وفنادق وغيرها — كل ما تحتاجه في مكان واحد
             </p>
           </div>
         </div>

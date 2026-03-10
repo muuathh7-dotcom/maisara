@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   const handleCTAClick = () => {
-    trackConversion.buttonClick("اختر الباقة الآن", "hero_section");
+    trackConversion.buttonClick("اختر خدماتك الآن", "hero_section");
     const packagesSection = document.getElementById('packages-section');
     if (packagesSection) {
       packagesSection.scrollIntoView({ behavior: 'smooth' });
@@ -89,28 +89,28 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
             <Check className="w-4 h-4" />
-            <span className="font-medium">خدمة نقل مرخصة</span>
+            <span className="font-medium">خدمة معتمدة ومرخصة</span>
           </div>
-          
+
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6" style={{
           lineHeight: '1.3'
         }}>
-            من المطار إلى باب الحرم
+            عمرتك بسكينة وطمأنينة
           </h1>
-          
+
           {/* Subheadline */}
           <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90 max-w-3xl mx-auto">
-            خدمة نقل مباشر من المطار إلى الحرم الشريف مع إمكانية الحصول على غرفة راحة لمدة 5 ساعات
+            نقل ومواقف وتخزين وفنادق بالساعة وغيرها — اختر ما يناسبك واستعد لعمرة مريحة بلا عناء
           </p>
-          
+
           {/* Rating */}
           <div className="flex items-center justify-center gap-2 mb-8">
             <div className="flex items-center gap-1">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star 
-                  key={star} 
-                  className="w-5 h-5 fill-accent text-accent" 
+                <Star
+                  key={star}
+                  className="w-5 h-5 fill-accent text-accent"
                 />
               ))}
             </div>
@@ -118,27 +118,27 @@ const Hero = () => {
             <span className="text-white/80">•</span>
             <span className="text-white/80">(5,851 تقييم)</span>
           </div>
-          
+
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <MapPin className="w-5 h-5 text-accent" />
-              <span className="font-medium">توصيل مباشر للحرم</span>
+              <span className="font-medium">نقل آمن من وإلى المطار</span>
             </div>
             <div className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <Clock className="w-5 h-5 text-accent" />
-              <span className="font-medium">خدمة على مدار الساعة</span>
+              <span className="font-medium">راحة ومرافق فندقية</span>
             </div>
             <div className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <ArrowLeftRight className="w-5 h-5 text-accent" />
-              <span className="font-medium">استقبال من المطار</span>
+              <span className="font-medium">تخزين ومواقف وخدمات تحلل</span>
             </div>
           </div>
           
            {/* CTA Buttons */}
            <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="accent" size="lg" className="text-xl md:text-2xl px-12 py-8 md:px-16 md:py-10" onClick={handleCTAClick}>
-              اختر الباقة الآن
+              اختر خدماتك الآن
             </Button>
            </div>
         </div>

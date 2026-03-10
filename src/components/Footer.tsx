@@ -11,8 +11,8 @@ const Footer = () => {
               خدمة استقبال المعتمرين
             </h3>
             <p className="text-primary-foreground/80 leading-relaxed mb-6">
-              نحن متخصصون في تقديم خدمات استقبال المعتمرين في مطار جدة
-              وتوفير تجربة سلسة ومريحة من المطار إلى الحرم الشريف.
+              نوفر خدمات متكاملة للمعتمرين في جدة — من النقل والتخزين إلى
+              الراحة الفندقية وخدمات التحلل. اختر ما يناسبك لعمرة مريحة.
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 accent-gradient rounded-full flex items-center justify-center">

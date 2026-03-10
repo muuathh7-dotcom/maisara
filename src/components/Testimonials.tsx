@@ -2,25 +2,25 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [{
   name: "أحمد الغامدي",
   rating: 5,
-  text: "خدمة ممتازة والنقل مريح جداً. كل ربع ساعة فيه رحلة وهذا يوفر الوقت كثير."
+  text: "اخترت النقل بالحافلة وكبينة التخزين وكانت التجربة ممتازة. كل شيء كان جاهزًا عند وصولي للمطار."
 }, {
   name: "فاطمة السميري",
   rating: 5,
-  text: "الباقة الشاملة مع الغرفة الفندقية كانت حلوة جداً. خلتني أرتاح بعد العمرة والخدمة احترافية."
+  text: "حجزت غرفة فندقية بالساعة وخدمة التحلل. ارتحت بعد العمرة ولم أحتج للبحث عن شيء آخر."
 }, {
   name: "محمد القحطاني",
   rating: 5,
-  text: "خدمة طيبة وفريق محترم ومنظم. التنظيم والمواعيد دقيقة والخدمة تستاهل أكثر من كذا."
+  text: "أفضل ما في الخدمة أنك تختار فقط ما تحتاجه. حجزت سيارة خاصة ومواقف المسار وكان كل شيء منظمًا."
 }];
 const Testimonials = () => {
   return <section dir="rtl" className="bg-muted/50 py-[40px]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            ماذا يقول عملاؤنا؟
+            تجارب معتمرين سبقوك
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            تجارب حقيقية من معتمرين استخدموا خدمتنا وحققوا رحلة عمرة مثالية
+            انطباعات من معتمرين وثقوا بنا في رحلاتهم
           </p>
         </div>
 

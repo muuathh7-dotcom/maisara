@@ -1,23 +1,23 @@
-import { Plane, Luggage, Hotel, MapPin } from "lucide-react";
+import { MousePointerClick, CreditCard, Plane, SmilePlus } from "lucide-react";
 const steps = [{
-  icon: Plane,
-  title: "الاستقبال من المطار",
-  description: "نستقبلك عند الوصول لمطار الملك عبدالعزيز الدولي بجدة",
+  icon: MousePointerClick,
+  title: "اختر خدماتك",
+  description: "تصفّح الخدمات المتاحة واختر ما يناسب رحلتك",
   number: "01"
 }, {
-  icon: MapPin,
-  title: "التوصيل إلى باب الحرم",
-  description: "نوصلك مباشرة لباب الحرم لتبدأ عمرتك فوراً",
+  icon: CreditCard,
+  title: "أكمل الحجز",
+  description: "أتمم حجزك بخطوات يسيرة وآمنة",
   number: "02"
 }, {
-  icon: Luggage,
-  title: "نقل الأمتعة إلى الفندق",
-  description: "نستلم أمتعتك ونتولى نقلها بأمان إلى الفندق",
+  icon: Plane,
+  title: "وصولك إلى جدة",
+  description: "نستقبلك في المطار ونوفر لك الخدمات التي اخترتها",
   number: "03"
 }, {
-  icon: Plane,
-  title: "العودة إلى المطار",
-  description: "بعد انتهاء عمرتك، نعيدك بأمان إلى المطار",
+  icon: SmilePlus,
+  title: "عمرة بسكينة",
+  description: "تفرّغ لعبادتك بخشوع ودعنا نتولى ما تبقّى",
   number: "04"
 }];
 const HowItWorks = () => {
@@ -25,10 +25,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            كيف تعمل الخدمة؟
+            كيف تبدأ رحلتك؟
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            عملية بسيطة وسهلة في أربع خطوات تضمن لك رحلة مريحة وسلسة من وإلى المطار
+            أربع خطوات يسيرة نحو عمرة هادئة ومريحة
           </p>
         </div>
 
