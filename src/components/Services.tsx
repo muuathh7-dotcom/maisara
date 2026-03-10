@@ -19,6 +19,7 @@ interface Service {
   id: string;
   title: string;
   description: string;
+  price: string;
   icon: React.ElementType;
   accentColor: string;
   iconBg: string;
@@ -31,6 +32,7 @@ const services: Service[] = [
     id: "private-transfer",
     title: "نقل خاص من وإلى المطار",
     description: "سيارة خاصة مع سائق محترف توصلك بأمان وراحة تامة",
+    price: "من 150 ر.س",
     icon: Car,
     accentColor: "from-emerald-600 to-emerald-800",
     iconBg: "bg-emerald-50 text-emerald-700",
@@ -41,6 +43,7 @@ const services: Service[] = [
     id: "bus-transfer",
     title: "نقل بالحافلة من وإلى المطار",
     description: "حافلات مكيّفة ومريحة بمواعيد منتظمة كل 15 دقيقة",
+    price: "من 35 ر.س",
     icon: Bus,
     accentColor: "from-teal-600 to-teal-800",
     iconBg: "bg-teal-50 text-teal-700",
@@ -51,6 +54,7 @@ const services: Service[] = [
     id: "parking",
     title: "حجز مواقف المسار",
     description: "مواقف آمنة بالقرب من الحرم الشريف لراحتك",
+    price: "من 40 ر.س",
     icon: ParkingCircle,
     accentColor: "from-blue-600 to-blue-800",
     iconBg: "bg-blue-50 text-blue-700",
@@ -61,6 +65,7 @@ const services: Service[] = [
     id: "tahallul",
     title: "خدمات التحلل والقص",
     description: "خدمة حلاقة وتقصير بعد أداء مناسك العمرة",
+    price: "من 20 ر.س",
     icon: Scissors,
     accentColor: "from-violet-600 to-violet-800",
     iconBg: "bg-violet-50 text-violet-700",
@@ -71,6 +76,7 @@ const services: Service[] = [
     id: "storage",
     title: "كبائن التخزين",
     description: "كبائن آمنة لحفظ أمتعتك طوال فترة العمرة",
+    price: "من 25 ر.س",
     icon: Package,
     accentColor: "from-amber-600 to-amber-800",
     iconBg: "bg-amber-50 text-amber-700",
@@ -81,6 +87,7 @@ const services: Service[] = [
     id: "hourly-hotel",
     title: "فنادق بالساعة",
     description: "غرف فندقية مريحة للاستراحة بالساعة قبل العمرة أو بعدها",
+    price: "من 75 ر.س/ساعة",
     icon: Hotel,
     accentColor: "from-rose-600 to-rose-800",
     iconBg: "bg-rose-50 text-rose-700",
@@ -91,6 +98,7 @@ const services: Service[] = [
     id: "hotel-facilities",
     title: "مرافق فندقية بدون إقامة",
     description: "استفد من مرافق الفندق دون الحاجة لحجز غرفة",
+    price: "من 50 ر.س",
     icon: Dumbbell,
     accentColor: "from-cyan-600 to-cyan-800",
     iconBg: "bg-cyan-50 text-cyan-700",
@@ -271,6 +279,13 @@ const Services = () => {
                 }`}>
                   {service.description}
                 </p>
+                {!isDisabled && (
+                  <p className={`text-sm font-bold mt-2 ${
+                    isSelected ? "text-primary" : "text-primary/70"
+                  }`}>
+                    {service.price}
+                  </p>
+                )}
 
                 {/* Disabled reason */}
                 {isDisabled && disabledReason && (

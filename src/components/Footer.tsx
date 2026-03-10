@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,6 +33,14 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-accent" />
                 <span>مطار الملك عبدالعزيز الدولي، جدة</span>
               </div>
+              <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
+                <MessageCircle className="w-5 h-5 text-[#25D366]" />
+                <span>واتساب: 966 50 000 0000</span>
+              </a>
+              <a href="tel:+966500000000" className="flex items-center gap-3 hover:text-accent transition-colors">
+                <Phone className="w-5 h-5 text-accent" />
+                <span>اتصل: 966 50 000 0000</span>
+              </a>
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-accent" />
                 <span>24/7 - على مدار الساعة</span>
@@ -45,7 +53,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60">
-              © 2024 خدمة استقبال المعتمرين. جميع الحقوق محفوظة.
+              © 2026 خدمة استقبال المعتمرين. جميع الحقوق محفوظة.
             </p>
             <div className="flex gap-6 text-primary-foreground/60">
               <a href="#" className="hover:text-accent transition-smooth">الشروط والأحكام</a>

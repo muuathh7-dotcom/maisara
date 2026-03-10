@@ -17,7 +17,25 @@ const CTA = () => {
           </p>
           
           {/* Contact Options */}
-          <div className="flex justify-center mb-12">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <a
+              href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366]/20 hover:bg-[#25D366]/30 backdrop-blur-sm rounded-lg p-6 max-w-sm transition-colors"
+            >
+              <MessageCircle className="w-8 h-8 text-[#25D366] mx-auto mb-3" />
+              <h3 className="font-bold mb-2">واتساب</h3>
+              <p className="text-white/80">تواصل فوري</p>
+            </a>
+            <a
+              href="tel:+966500000000"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-sm transition-colors"
+            >
+              <Phone className="w-8 h-8 text-accent mx-auto mb-3" />
+              <h3 className="font-bold mb-2">اتصل بنا</h3>
+              <p className="text-white/80 direction-ltr">+966 50 000 0000</p>
+            </a>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-sm">
               <Mail className="w-8 h-8 text-accent mx-auto mb-3" />
               <h3 className="font-bold mb-2">البريد الإلكتروني</h3>

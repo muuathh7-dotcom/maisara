@@ -65,21 +65,24 @@ const HowItWorks = () => {
                     {index < steps.length - 1 && <div className="hidden lg:block absolute top-12 right-1/2 w-full h-0.5 bg-gradient-to-l from-primary to-accent z-0"></div>}
                     
                     {/* Step Card */}
-                    <div className="relative z-10 bg-card rounded-xl p-4 shadow-elegant hover:shadow-glow transition-smooth text-center h-32 flex flex-col justify-center">
+                    <div className="relative z-10 bg-card rounded-xl p-5 shadow-elegant hover:shadow-glow transition-smooth text-center">
                       {/* Step Number */}
                       <div className="absolute -top-3 right-4 w-6 h-6 primary-gradient rounded-full flex items-center justify-center text-primary-foreground font-bold text-xs">
                         {step.number}
                       </div>
-                      
+
                       {/* Icon */}
-                      <div className="w-10 h-10 accent-gradient rounded-full flex items-center justify-center mx-auto mb-2">
+                      <div className="w-10 h-10 accent-gradient rounded-full flex items-center justify-center mx-auto mb-3">
                         <IconComponent className="w-5 h-5 text-accent-foreground" />
                       </div>
-                      
+
                       {/* Content */}
-                      <h3 className="text-lg font-bold text-foreground">
+                      <h3 className="text-lg font-bold text-foreground mb-2">
                         {step.title}
                       </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
                   </div>;
             })}

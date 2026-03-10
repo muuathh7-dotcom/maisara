@@ -69,15 +69,28 @@ const TargetSegments = () => {
         </Dialog>;
     }
 
-    // Desktop version - no modal
-    return <div className="bg-card border border-border rounded-lg p-4 text-center hover:bg-primary/5 transition-colors cursor-pointer">
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-            <Icon className="w-5 h-5 text-primary" />
+    // Desktop version - show full details
+    return <div className="bg-card border border-border rounded-lg p-6 text-right hover:bg-primary/5 hover:border-primary/30 transition-all duration-200">
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Icon className="w-5 h-5 text-primary" />
+            </div>
+            <h3 className="text-base font-semibold text-foreground">
+              {segment.title}
+            </h3>
           </div>
-          <h3 className="text-base font-semibold text-foreground">
-            {segment.title}
-          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            {segment.description}
+          </p>
+          <ul className="space-y-1.5">
+            {segment.benefits.map((benefit: string, i: number) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                <span className="text-primary mt-0.5">•</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>;
   };
