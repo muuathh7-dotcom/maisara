@@ -5,11 +5,12 @@ import { ArrowLeftRight, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import hotelRoomImage from "@/assets/hotel-room.jpg";
 import { trackConversion } from "@/lib/analytics";
+import { PRICES } from "@/config/prices";
 const packages = [{
   id: "transport-only",
   title: "الأساسية: نقل مرن",
   subtitle: "Basic Transportation Package",
-  price: "98",
+  price: String(PRICES.packageBasic),
   duration: "ذهاب وعودة",
   features: ["نقل مرن ومباشر من المطار إلى بوابة الحرم", "رحلات متعددة كل 15 دقيقة لتقليل مدة الانتظار", "عودة سهلة وسريعة من مواقف برج الساعة في أي وقت", "فريق متخصص للاستقبال بالعربات لأداء العمرة (خدمة إضافية)"],
   color: "bg-accent",
@@ -19,7 +20,7 @@ const packages = [{
   id: "express-vip",
   title: "الشاملة: نقل + راحة",
   subtitle: "Complete Package with Rest",
-  price: "249",
+  price: String(PRICES.packageComplete),
   duration: "ذهاب وعودة",
   features: ["نقل مرن ومباشر من المطار إلى بوابة الحرم", "رحلات متعددة كل 15 دقيقة لتقليل مدة الانتظار", "غرفة فندقية 4 نجوم بجوار مطار جدة", "إقامة 5 ساعات مميزة شاملة ضيافة وقهوة سعودية", "مناشف وأدوات عناية شخصية ودورة مياه خاصة", "حفظ الأمتعة وإيصالها للغرفة أثناء أدائك للعمرة"],
   color: "bg-primary",
