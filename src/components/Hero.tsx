@@ -96,12 +96,12 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6" style={{
           lineHeight: '1.3'
         }}>
-            اختر خدمات عمرتك بنفسك
+            عمرتك بسكينة وطمأنينة
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90 max-w-3xl mx-auto">
-            نقل، مواقف، تخزين، فنادق بالساعة وغيرها — حدد ما تحتاجه فقط وادفع على قدر احتياجك
+            نقل ومواقف وتخزين وفنادق بالساعة وغيرها — اختر ما يناسبك واستعد لعمرة مريحة بلا عناء
           </p>
 
           {/* Rating */}
