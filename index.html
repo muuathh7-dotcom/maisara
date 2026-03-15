@@ -48,6 +48,16 @@
 
   <body>
     <div id="root"></div>
+    <!-- GitHub Pages SPA routing restore -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          window.history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
     
     <!-- Defer analytics scripts after page load for better FCP -->

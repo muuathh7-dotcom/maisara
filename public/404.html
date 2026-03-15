@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ميسرة</title>
+    <script>
+      // GitHub Pages SPA redirect trick
+      // Saves the full URL to sessionStorage then redirects to index
+      var path = window.location.pathname;
+      var base = '/umrah-hassle-free';
+      var rest = path.replace(base, '') || '/';
+      sessionStorage.setItem('redirect', rest + window.location.search + window.location.hash);
+      window.location.replace(base + '/');
+    </script>
+  </head>
+  <body></body>
+</html>
