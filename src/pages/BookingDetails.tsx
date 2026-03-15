@@ -27,11 +27,15 @@ const BookingDetails = () => {
   const [airlineName, setAirlineName] = useState("");
   const [flightNumber, setFlightNumber] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
+  const [umrahTime, setUmrahTime] = useState("");
+  const [hotelTiming, setHotelTiming] = useState<"before" | "after" | "">("");
 
   // Parse services from URL
   const selectedServices: ServiceConfig[] = serviceIds
     ? getServicesByIds(serviceIds.split(","))
     : [];
+
+  const hasHourlyHotel = selectedServices.some((s) => s.id === "hourly-hotel");
 
   // Redirect if no valid services
   useEffect(() => {
@@ -109,6 +113,8 @@ const BookingDetails = () => {
       airlineName,
       flightNumber,
       arrivalTime,
+      umrahTime,
+      hotelTiming: hasHourlyHotel ? hotelTiming : undefined,
     };
 
     navigate("/checkout", { state: { bookingData } });
@@ -317,6 +323,77 @@ const BookingDetails = () => {
                   </SelectContent>
                 </Select>
               </div>
+            </div>
+
+            {/* Umrah Time */}
+            <div className="space-y-2">
+              <Label className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                الوقت المتوقع لأداء العمرة
+              </Label>
+              <div className="grid grid-cols-2 gap-3" dir="ltr">
+                <Select
+                  value={umrahTime.slice(0, 2)}
+                  onValueChange={(h) => setUmrahTime(h + (umrahTime.slice(2) || "00"))}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="الساعة" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Array.from({ length: 24 }, (_, i) => String(i).padStart(2, "0")).map((h) => (
+                      <SelectItem key={h} value={h}>{h}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select
+                  value={umrahTime.slice(2, 4)}
+                  onValueChange={(m) => setUmrahTime((umrahTime.slice(0, 2) || "00") + m)}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="الدقيقة" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {["00", "15", "30", "45"].map((m) => (
+                      <SelectItem key={m} value={m}>{m}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Hotel timing — only shown when hourly-hotel is selected */}
+              {hasHourlyHotel && umrahTime.length >= 4 && (
+                <div className="mt-3 p-4 bg-rose-50 border border-rose-200 rounded-lg space-y-3">
+                  <p className="text-sm font-medium text-rose-800">
+                    هل تريد الغرفة الفندقية قبل العمرة أم بعدها؟
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setHotelTiming("before")}
+                      className={cn(
+                        "flex-1 py-2 px-4 rounded-lg border-2 text-sm font-medium transition-all",
+                        hotelTiming === "before"
+                          ? "border-rose-600 bg-rose-600 text-white"
+                          : "border-rose-200 bg-white text-rose-700 hover:border-rose-400"
+                      )}
+                    >
+                      قبل العمرة
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setHotelTiming("after")}
+                      className={cn(
+                        "flex-1 py-2 px-4 rounded-lg border-2 text-sm font-medium transition-all",
+                        hotelTiming === "after"
+                          ? "border-rose-600 bg-rose-600 text-white"
+                          : "border-rose-200 bg-white text-rose-700 hover:border-rose-400"
+                      )}
+                    >
+                      بعد العمرة
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
 
             <p className="text-xs text-muted-foreground">
