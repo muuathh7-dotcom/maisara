@@ -44,6 +44,11 @@ export type Database = {
           savings: number | null
           total_price: number
           updated_at: string
+          utm_campaign: string | null
+          utm_content: string | null
+          utm_medium: string | null
+          utm_source: string | null
+          utm_term: string | null
           wheelchair_service: boolean | null
         }
         Insert: {
@@ -75,6 +80,11 @@ export type Database = {
           savings?: number | null
           total_price: number
           updated_at?: string
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
           wheelchair_service?: boolean | null
         }
         Update: {
@@ -106,6 +116,11 @@ export type Database = {
           savings?: number | null
           total_price?: number
           updated_at?: string
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
           wheelchair_service?: boolean | null
         }
         Relationships: [
@@ -135,6 +150,11 @@ export type Database = {
           package_id: string
           package_name: string
           updated_at: string
+          utm_campaign: string | null
+          utm_content: string | null
+          utm_medium: string | null
+          utm_source: string | null
+          utm_term: string | null
           wheelchair_service: boolean | null
         }
         Insert: {
@@ -153,6 +173,11 @@ export type Database = {
           package_id: string
           package_name: string
           updated_at?: string
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
           wheelchair_service?: boolean | null
         }
         Update: {
@@ -171,6 +196,11 @@ export type Database = {
           package_id?: string
           package_name?: string
           updated_at?: string
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
           wheelchair_service?: boolean | null
         }
         Relationships: []

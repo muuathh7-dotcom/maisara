@@ -13,7 +13,7 @@ import { ar } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import { trackConversion } from "@/lib/analytics";
 import { supabase } from "@/integrations/supabase/client";
-import { getCustomerTrackingData } from "@/lib/customer-fingerprint";
+import { getCustomerTrackingData, getStoredUTMs } from "@/lib/customer-fingerprint";
 import BookingProgress from "@/components/BookingProgress";
 import { getServicesByIds, type ServiceConfig } from "@/lib/services-config";
 
@@ -53,6 +53,7 @@ const BookingDetails = () => {
       if (departureDate && passengers && selectedServices.length > 0 && !preBookingId) {
         try {
           const trackingData = getCustomerTrackingData();
+          const utmData = getStoredUTMs();
           const serviceIdList = selectedServices.map((s) => s.id).join(",");
           const serviceNames = selectedServices.map((s) => s.title).join(" + ");
 
@@ -67,6 +68,7 @@ const BookingDetails = () => {
               wheelchair_service: false,
               extra_luggage: false,
               ...trackingData,
+              ...utmData,
             })
             .select("id")
             .single();

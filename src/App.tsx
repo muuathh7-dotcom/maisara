@@ -10,14 +10,16 @@ import BookingDetails from "./pages/BookingDetails";
 import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 import { trackPageView } from "./lib/analytics";
+import { captureAndStoreUTMs } from "./lib/customer-fingerprint";
 
 const queryClient = new QueryClient();
 
-// Component to track page views
+// Component to track page views and capture UTMs on first visit
 const PageTracker = () => {
   const location = useLocation();
-  
+
   useEffect(() => {
+    captureAndStoreUTMs();
     trackPageView(location.pathname);
   }, [location.pathname]);
   

@@ -10,7 +10,7 @@ import { CreditCard, Smartphone, DollarSign, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { trackConversion } from "@/lib/analytics";
 import { supabase } from "@/integrations/supabase/client";
-import { getCustomerTrackingData } from "@/lib/customer-fingerprint";
+import { getCustomerTrackingData, getStoredUTMs } from "@/lib/customer-fingerprint";
 import BookingProgress from "@/components/BookingProgress";
 
 interface BookingService {
@@ -97,6 +97,7 @@ const Checkout = () => {
   }) => {
     try {
       const trackingData = getCustomerTrackingData();
+      const utmData = getStoredUTMs();
       const packageName = bookingData.services.map((s) => s.title).join(" + ");
 
       const { data, error } = await supabase
@@ -126,6 +127,7 @@ const Checkout = () => {
             booking_status: "pending",
             pre_booking_id: bookingData.preBookingId || null,
             ...trackingData,
+            ...utmData,
           },
         ])
         .select("booking_reference");
