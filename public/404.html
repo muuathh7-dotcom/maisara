@@ -7,10 +7,8 @@
       // GitHub Pages SPA redirect trick
       // Saves the full URL to sessionStorage then redirects to index
       var path = window.location.pathname;
-      var base = '/maisara';
-      var rest = path.replace(base, '') || '/';
-      sessionStorage.setItem('redirect', rest + window.location.search + window.location.hash);
-      window.location.replace(base + '/');
+      sessionStorage.setItem('redirect', path + window.location.search + window.location.hash);
+      window.location.replace('/');
     </script>
   </head>
   <body></body>
