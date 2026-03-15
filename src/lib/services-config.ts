@@ -94,10 +94,9 @@ export const SERVICES: ServiceConfig[] = [
   {
     id: "hourly-hotel",
     title: "فنادق بالساعة",
-    description: "غرف فندقية مريحة للاستراحة بالساعة قبل العمرة أو بعدها",
+    description: "باقة 5 ساعات ثابتة في غرفة فندقية مريحة للاستراحة قبل العمرة أو بعدها",
     price: PRICES.hourlyHotel,
-    priceLabel: `من ${PRICES.hourlyHotel} ر.س/ساعة`,
-    priceUnit: "ساعة",
+    priceLabel: `${PRICES.hourlyHotel} ر.س (5 ساعات)`,
     icon: Hotel,
     accentColor: "from-rose-600 to-rose-800",
     iconBg: "bg-rose-50 text-rose-700",
