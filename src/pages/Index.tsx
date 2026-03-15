@@ -4,6 +4,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import TargetSegments from "@/components/TargetSegments";
 import HowItWorks from "@/components/HowItWorks";
 import Services from "@/components/Services";
+import ServicesShowcase from "@/components/ServicesShowcase";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -17,6 +18,9 @@ const Index = () => {
       </div>
       <div className="py-[20px]">
         <HowItWorks />
+      </div>
+      <div className="py-[8px]">
+        <ServicesShowcase />
       </div>
       <div className="py-[6px]">
         <Services />
