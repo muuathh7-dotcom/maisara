@@ -51,7 +51,7 @@ const Navbar = () => {
         {/* Right side: phone + CTA */}
         <div className="flex items-center gap-3">
           <a
-            href="tel:+966500000000"
+            href="tel:+966503155948"
             className={`hidden sm:flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
               scrolled
                 ? "text-muted-foreground hover:text-foreground"

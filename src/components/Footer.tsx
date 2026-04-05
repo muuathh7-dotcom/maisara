@@ -33,13 +33,13 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-accent" />
                 <span>مطار الملك عبدالعزيز الدولي، جدة</span>
               </div>
-              <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
+              <a href="https://wa.me/966503155948" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
                 <MessageCircle className="w-5 h-5 text-[#25D366]" />
-                <span>واتساب: 966 50 000 0000</span>
+                <span>واتساب: 966 50 315 5948</span>
               </a>
-              <a href="tel:+966500000000" className="flex items-center gap-3 hover:text-accent transition-colors">
+              <a href="tel:+966503155948" className="flex items-center gap-3 hover:text-accent transition-colors">
                 <Phone className="w-5 h-5 text-accent" />
-                <span>اتصل: 966 50 000 0000</span>
+                <span>اتصل: 966 50 315 5948</span>
               </a>
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-accent" />
