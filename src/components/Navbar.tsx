@@ -52,6 +52,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <a
             href="tel:+966503155948"
+            dir="ltr"
             className={`hidden sm:flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
               scrolled
                 ? "text-muted-foreground hover:text-foreground"
@@ -59,7 +60,7 @@ const Navbar = () => {
             }`}
           >
             <Phone className="w-4 h-4" />
-            <span dir="ltr">966 50 315 5948</span>
+            <span>966 50 315 5948</span>
           </a>
           <Button
             onClick={scrollToServices}
