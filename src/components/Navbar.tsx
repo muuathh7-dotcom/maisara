@@ -60,7 +60,7 @@ const Navbar = () => {
             }`}
           >
             <Phone className="w-4 h-4" />
-            <span>966 50 315 5948</span>
+            <span style={{direction: 'ltr', unicodeBidi: 'bidi-override'}}>966 50 315 5948</span>
           </a>
           <Button
             onClick={scrollToServices}
