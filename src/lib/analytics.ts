@@ -12,7 +12,7 @@ declare global {
 
 // Configuration - Replace with your actual Google Ads Conversion ID
 const GOOGLE_ADS_ID = 'AW-17485794047';
-const GA_ID = 'G-6B8662Z89L';
+const GA_ID = 'G-Z96Y39STPX';
 
 // Track page views
 export const trackPageView = (pagePath: string, pageTitle?: string) => {
